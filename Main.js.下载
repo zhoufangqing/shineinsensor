@@ -1,0 +1,39 @@
+﻿var _Interface = "/Interface.ashx";
+var _HidePopCategory = null;
+var _BeforeCategory = null;
+var _BlogIndex = 0;
+var _PageLoad = new Function();
+var _LoadActive = new Function();
+function _Init() {
+    _PageLoad();
+
+}
+
+function SearchKeyword(Element) {
+    _Sapiential(Element, 500, "_Request(_Interface,\"Post\", \"Interface=SearchKeyword&Keyword=" + Element.value + "&PageIndex=1\",\"ShowSapiential(eval(XmlHttp.responseText));\")", null, "<div class='SapientialRow' onmouseover='this.style.background=\"#3399FF\";this.style.color=\"#FFFFFF\";' onmouseout='this.style.background=\"transparent\";this.style.color=\"#000000\";' onclick='SourceElement.value=this.innerHTML;'><!Title!></div>", "if(typeof(Sapiential)!='undefined')Element.value = Sapiential.childNodes[SapientialIndex].innerHTML")
+}
+function ShowPopCategory() {
+    if (_HidePopCategory != null) {
+        clearTimeout(_HidePopCategory);
+    }
+    _G("PopCategoryBox").style.display = "inherit";
+}
+function HidePopCategory() {
+    if (!_Internally(_G("PopCategoryBox")))
+        _HidePopCategory = setTimeout('_G("PopCategoryBox").style.display = "none"', 200);
+}
+
+function ShowBlog() {
+    if (_BlogIndex == 5) _BlogIndex = 0;
+    _S(_G("BlogShow" + _BlogIndex), 0, 1, 500, 50);
+    setTimeout('_S(_G("BlogShow" + _BlogIndex.toString()), 1, 0, 500, 50); ++_BlogIndex;', 3000);
+    setTimeout("ShowBlog()", 5000);
+
+}
+
+
+function SearchKeyword(Keyword) {
+    if (/^\s*$/.test(Keyword))return;
+    open("/Search.aspx?Search="+Keyword);
+}
+

@@ -1,0 +1,61 @@
+﻿function ErrorCode(Code) {
+    switch (Code) {
+        case "-100001":
+            alert("Error：Verification code error！Code：" + Code);
+            break;
+        case "-100002":
+            alert("Error：Duplicate E-Mail Address！Code：" + Code);
+            break;
+        case "-100003":
+            alert("Error：Duplicate Nickname！Code：" + Code);
+            break;
+        case "-100004":
+            alert("Error：The user does not log in or sign in overtime！Code：" + Code);
+            break;
+        case "-100005":
+            alert("Error：Birthday date format error！Code：" + Code);
+            break;
+        case "-100006":
+            alert("Error：Verify that the password is wrong！Code：" + Code);
+            break;
+        case "-100007":
+            alert("Error：Login has expired！Code：" + Code);
+            break;
+        case "-100008":
+            alert("Error：The user does not exist！Code：" + Code);
+            break;
+        case "-101001":
+            alert("Error：User account does not exist！Code：" + Code);
+            break;
+        case "-101002":
+            alert("Error：Wrong password！Code：" + Code);
+            break;
+        case "-101003":
+            alert("Error：Registration does not match the account information！Code：" + Code);
+            break;
+        case "-103001":
+            alert("Error：Registration information inconsistent with the nickname！Code：" + Code);
+            break;
+        case "-103002":
+            alert("Error：The current time period has been exceeded！Code：" + Code);
+            break;
+        case "-200001":
+            alert("错误：不能删除存在子分类的父分类！Code：" + Code);
+            break;
+        case "-700001":
+            alert("Error：You have reached the maximum number of messages today！Code：" + Code);
+            break;
+        case "-800010":
+            alert("Error：You can not delete the primary administrator account！Code：" + Code);
+            break;
+        case "-450001":
+            alert("Error：Like the current account duplicate points！Code：" + Code);
+            break;
+        default:
+            break;
+    }
+    if (Code < 0)
+        return true;
+    else
+        return false;
+}

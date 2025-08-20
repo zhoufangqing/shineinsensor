@@ -1,0 +1,236 @@
+﻿.ShowPictureBox
+{
+    width:1200px;
+    min-width:1200px;
+    height:500px;
+    min-height:500px; 
+    position:relative;
+    margin:0px auto;
+}
+#RollPictureListBox
+{
+    width:1000%;
+    height:auto;
+    position:absolute;
+}
+.HomePictureBox
+{
+    width:10%;
+    height:auto;
+    float:left;
+}
+.HomePictureBox img
+{
+    width:100%;
+    height:auto
+}
+.PictureNumberLabelRow
+{
+    width:100%;
+    height:50px;
+    position:absolute;
+    top:90%;
+    text-align:center;
+}
+.PictureNumberLabelBox
+{
+    width:200px;
+    height:30px;
+    margin:0px auto;
+}
+.PictureNumberLabel
+{
+    width:30px;
+    height:30px;
+    line-height:32px;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    margin-right:10px; 
+    cursor:pointer; 
+    font-size:16px; 
+}
+#AutoSizePicture
+{
+    width:100%;
+    height:auto;
+    min-height:700px;
+    visibility:hidden;
+}
+#AutoSizePicture img
+{
+    width:100%;
+    height:auto;
+}
+.PictureNumberLabel .TransparentLayer
+{
+    filter:alpha(opacity=80);
+    -moz-opacity:0.80;
+    opacity:0.80;
+}
+
+
+.AboutUsBox
+{
+    width:1200px;
+    min-width:1200px;
+    margin:0px auto;
+    
+}
+.AboutUsBox .Title,.PageCategoryBox  .Title,.ApplicationBox .Title,.NewsBox .Title
+{
+    height:50px;
+    font-size:28px;
+    line-height:70px;
+    margin-top:10px; color:rgb(9,91,166);color:#333333;
+}
+.DotLine
+{
+    height:0px;
+    color:#CCCCCC;
+    border-bottom-style:dotted;
+    border-width:0px;
+    border-bottom-width:1px;
+}
+.solidLine
+{
+    height:0px;
+    color:#0C7FEA;color:rgb(10,100,182);
+    border-bottom-style:solid;
+    border-width:0px;
+    border-bottom-width:1px;
+}
+.ArticleContent
+{
+    line-height:2;
+    font-size:16px;
+    color:#333333;
+}
+
+.PageCategoryBox
+{
+    width:1200px;
+    min-width:1200px;
+    margin:0px auto;
+}
+.TopCategoryBox
+{
+    margin-top:1px;
+    margin-bottom:15px;
+    0background-color:#F5F5F5;
+}
+.TopCategoryImage
+{
+    width:320px;
+    height:192px;
+    float:left;
+    border:1px solid #EEEEEE;
+}
+.TopCategoryImage img
+{
+    width:320px;
+    height:192px;
+}
+.TopCategoryContent
+{
+    width:850px;
+    height:auto;
+    margin-left:15px;
+    0background-color:#EEEEEE;
+    float:left;
+}
+.TopCategoryName
+{
+    height:30px;
+    font-size:22px;
+    line-height:36px;
+}
+.TopCategoryName a
+{
+    color:#CC0000;color:#FF6600;
+}
+.TopCategoryName a:hover
+{
+    color:#FF0000;
+}
+.TopCategoryDetail
+{
+    line-height:2;
+    color:#666666;
+    font-size:14px;
+}
+
+
+.ArticleBox
+{
+    width:1200px;
+    min-width:1200px;
+    margin:0px auto; 
+}
+
+.ApplicationBox,.NewsBox
+{
+    width:590px;
+    float:left;
+}
+.NewsBox
+{
+    float:right;
+}
+
+.ArtcleRow
+{
+   margin-top:5px;
+   margin-bottom:5px;  
+}
+.ArtcleTitle
+{
+    
+}
+
+.IdRow
+{
+    width:50px;
+    height:50px;
+    line-height:50px;
+    float:left;
+    font-size:22px;
+    text-align:center;
+    color:#999999;
+}
+.ArtcleTitleRow
+{
+    float:left;
+}
+.ArtcleTitle
+{
+    width:530px;
+    height:30px;
+    line-height:30px;
+    font-size:16px;
+}
+.ArtcleTitle a
+{
+    color:#333333;
+}
+.ArtcleTitle a:hover
+{
+    color:#FF0000;
+}
+.ArtcleTime
+{
+    color:#BBBBBB;
+    font-size:14px;
+}
+.ViewMore
+{
+    width:100%;
+    height:30px;
+    line-height:30ppx;
+    text-indent:50px;
+    font-size:16px;
+}
+.ViewMore a
+{
+    color:#FF0000;
+}

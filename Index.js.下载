@@ -1,0 +1,32 @@
+﻿_ScreenWidth = 0;
+_RollPictureIndex = 1;
+_RollPictureTimer = null;
+_Roll = true;
+function _PageLoad() {
+    if(_G("PictureNumber1")!=null)_G("PictureNumber1").className = "TransparentLayer BackgroundRed";
+    setTimeout("RollPicture(2)", 3000);
+}
+function RollPicture(PictureIndex) {
+    if (_RollPictureTimer != null) clearTimeout(_RollPictureTimer);
+    _ScreenWidth = _G("AutoSizePicture").offsetWidth;
+    _G("RollPictureListBox").style.left = -1 * (_ScreenWidth * PictureIndex - _ScreenWidth) + "px";
+    _M(_G("RollPictureListBox"), -1 * _ScreenWidth * PictureIndex, 0, 500, 100);
+    for (var i = 1; i < 6; i++) {
+        _G("PictureNumber" + i).className = i == PictureIndex ? "TransparentLayer BackgroundRed" : "TransparentLayer BackgroundWhite";
+    }
+    _RollPictureIndex = PictureIndex == 5 ? 1 : PictureIndex + 1;
+    _RollPictureTimer = setTimeout("RollPicture(_RollPictureIndex)", 3000);
+}
+function ActivePicture(Event, Element, Name, Image, Link) {
+    _G('BackgroundImage').style.cssText = "filter:alpha(opacity=20);-moz-opacity:0.20;opacity:0.20;";
+    Element.className = "ActiveModelPictureBox";
+    if (_G("ShowModelBox") != null) document.body.removeChild(_G("ShowModelBox"));
+    var ShowModelBox = _C("div", "ShowModelBox", "position:absolute;left:" + _GetElementPoint(Element).X + "px;top:" + ((_GetElementPoint(Element).Y - (document.documentElement.scrollTop || document.body.scrollTop)) < document.documentElement.clientHeight / 2 ? (_GetElementPoint(Element).Y + Element.offsetHeight) : (_GetElementPoint(Element).Y - 35)) + "px;-moz-box-shadow:3px 4px 5px rgba(0,0,0,.5);-webkit-box-shadow:3px 4px 5px rgba(0,0,0,.5);box-shadow:3px 4px 5px rgba(0,0,0,.5);");
+    ShowModelBox.innerHTML = Name;
+    document.body.appendChild(ShowModelBox);
+}
+function BlurPicture(Element) {
+    if (_G("ShowModelBox") != null) document.body.removeChild(_G("ShowModelBox"));
+    _G('BackgroundImage').style.cssText = "filter:alpha(opacity=100);-moz-opacity:1;opacity:1;";
+    Element.className = "ModelPictureBox";
+}
